@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-// TareasApp.jsx (versión Bootstrap)
-// Esta versión no usa Tailwind, solo clases de Bootstrap.
-// Compatible con el proyecto de 4Geeks Academy.
+
 
 export default function TareasApp() {
   const [taskText, setTaskText] = useState("");
@@ -38,7 +36,7 @@ export default function TareasApp() {
           />
         </div>
 
-        {/* Lista de tareas */}
+
         <ul className="list-group list-group-flush">
           {tasks.length === 0 ? (
             <li className="list-group-item text-muted">No hay tareas, añadir tarea.</li>
@@ -50,7 +48,7 @@ export default function TareasApp() {
               >
                 <span className="fs-5">{task.text}</span>
 
-                {/* Botón eliminar visible al hover (Bootstrap no tiene group-hover, así que usamos CSS inline) */}
+
                 <button
                   onClick={() => deleteTask(task.id)}
                   className="btn btn-danger btn-sm"
@@ -65,7 +63,7 @@ export default function TareasApp() {
           )}
         </ul>
 
-        {/* Pie */}
+
         <div className="card-footer text-muted small">
           {tasks.length} item{tasks.length !== 1 ? "s" : ""} left
         </div>
